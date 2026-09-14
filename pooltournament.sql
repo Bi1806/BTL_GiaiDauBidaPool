@@ -18,7 +18,17 @@
 --
 -- Table structure for table `taikhoan`
 --
+-- =====================================================
+-- TẠO DATABASE
+-- =====================================================
 
+DROP DATABASE IF EXISTS pooltournament;
+
+CREATE DATABASE pooltournament
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_0900_ai_ci;
+
+USE pooltournament;
 DROP TABLE IF EXISTS `taikhoan`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
