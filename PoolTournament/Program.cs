@@ -1,3 +1,7 @@
+using System;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace PoolTournament
 {
     internal static class Program
@@ -8,9 +12,26 @@ namespace PoolTournament
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+
+            try
+            {
+                // Khởi tạo Supabase ngầm trước khi mở Form để tránh khóa luồng UI (Deadlock)
+                Task.Run(async () =>
+                {
+                    await SupabaseClient.InitializeAsync();
+                }).Wait();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"Không thể kết nối ban đầu đến Supabase!\n\nLỗi: {ex.Message}",
+                    "Cảnh báo kết nối",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+            }
+
             Application.Run(new LoginForm());
         }
     }

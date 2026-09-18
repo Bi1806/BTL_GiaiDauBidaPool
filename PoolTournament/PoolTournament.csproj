@@ -13,8 +13,8 @@
     <None Remove="logo.png.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="26.7.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="supabase-csharp" Version="0.16.2" />
+	</ItemGroup>
 
 </Project>
