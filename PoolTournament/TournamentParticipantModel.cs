@@ -1,6 +1,6 @@
-﻿using System;
-using Postgrest.Attributes;
+﻿using Postgrest.Attributes;
 using Postgrest.Models;
+using System;
 
 namespace PoolTournament
 {

@@ -46,12 +46,11 @@ namespace PoolTournament
                     _selectedLocalImagePath = openFileDialog.FileName;
                     txtAvatarUrl.Text = Path.GetFileName(_selectedLocalImagePath);
 
-                    // Đọc file qua MemoryStream để xem trước và KHÔNG làm khóa file ảnh
                     byte[] imageBytes = File.ReadAllBytes(_selectedLocalImagePath);
                     using (MemoryStream ms = new MemoryStream(imageBytes))
                     {
                         if (picAvatar.Image != null) picAvatar.Image.Dispose();
-                        picAvatar.Image = Image.FromStream(ms);
+                        picAvatar.Image = new Bitmap(ms); // Dùng new Bitmap thay vì Image.FromStream
                     }
                 }
             }
@@ -105,7 +104,8 @@ namespace PoolTournament
                     using (MemoryStream ms = new MemoryStream(imageBytes))
                     {
                         if (picAvatar.Image != null) picAvatar.Image.Dispose();
-                        picAvatar.Image = Image.FromStream(ms);
+                        // Dùng new Bitmap(ms) để copy hoàn toàn dữ liệu ảnh vào bộ nhớ
+                        picAvatar.Image = new Bitmap(ms);
                     }
                 }
             }
@@ -115,7 +115,6 @@ namespace PoolTournament
                 picAvatar.Image = null;
             }
         }
-
         #endregion
 
         #region Tải & Thao tác dữ liệu Supabase
@@ -161,46 +160,88 @@ namespace PoolTournament
             {
                 if (SupabaseClient.Instance == null) return;
 
-                var partRes = await SupabaseClient.Instance.From<TournamentParticipantModel>()
+                // 1. Truy vấn bảng tournament_participants để lấy danh sách ID giải đấu của cơ thủ này
+                var partRes = await SupabaseClient.Instance
+                    .From<TournamentParticipantModel>()
                     .Where(x => x.PlayerId == playerId)
                     .Get();
 
                 var participantRecords = partRes.Models;
 
+                // Nếu cơ thủ chưa tham gia giải nào -> Xóa bảng và cập nhật Label
                 if (participantRecords == null || participantRecords.Count == 0)
                 {
                     dgvTournaments.DataSource = null;
-                    lblTotalTournaments.Text = "Tổng số giải đã tham gia: 0";
+                    lblTotalTournaments.Text = "🏆 Tổng số giải đã tham gia: 0";
                     return;
                 }
 
+                // Lấy danh sách ID các giải đấu
                 var tournamentIds = participantRecords.Select(x => x.TournamentId).ToList();
 
-                var tourRes = await SupabaseClient.Instance.From<TournamentModel>().Get();
+                // 2. Truy vấn bảng tournaments để lấy chi tiết thông tin các giải đấu
+                var tourRes = await SupabaseClient.Instance
+                    .From<TournamentModel>()
+                    .Get();
+
+                // Lọc theo các ID đã tham gia & Sắp xếp (Giải đang diễn ra/mới lên đầu)
                 var matchingTournaments = tourRes.Models
                     .Where(t => tournamentIds.Contains(t.Id))
-                    .OrderByDescending(t => t.StartDate)
+                    .OrderByDescending(t => t.Status == "ongoing")
+                    .ThenByDescending(t => t.StartDate)
                     .ToList();
 
+                // 3. Tắt AutoSize trước khi gán data để chống đơ UI
+                dgvTournaments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+
+                // 4. Format dữ liệu hiển thị lên DataGridView
                 dgvTournaments.DataSource = matchingTournaments.Select(t => new
                 {
                     Title = t.Title,
                     StartDate = t.StartDate.ToString("dd/MM/yyyy"),
                     EndDate = t.EndDate.ToString("dd/MM/yyyy"),
-                    Status = t.Status
+                    StatusText = GetStatusDisplay(t.Status)
                 }).ToList();
 
-                if (dgvTournaments.Columns["Title"] != null) dgvTournaments.Columns["Title"].HeaderText = "Tên giải đấu";
-                if (dgvTournaments.Columns["StartDate"] != null) dgvTournaments.Columns["StartDate"].HeaderText = "Ngày bắt đầu";
-                if (dgvTournaments.Columns["EndDate"] != null) dgvTournaments.Columns["EndDate"].HeaderText = "Ngày kết thúc";
-                if (dgvTournaments.Columns["Status"] != null) dgvTournaments.Columns["Status"].HeaderText = "Trạng thái";
+                // 5. Đặt tên cột tiếng Việt
+                if (dgvTournaments.Columns["Title"] != null)
+                {
+                    dgvTournaments.Columns["Title"].HeaderText = "Tên giải đấu";
+                    dgvTournaments.Columns["Title"].FillWeight = 200;
+                }
+                if (dgvTournaments.Columns["StartDate"] != null)
+                    dgvTournaments.Columns["StartDate"].HeaderText = "Ngày bắt đầu";
+                if (dgvTournaments.Columns["EndDate"] != null)
+                    dgvTournaments.Columns["EndDate"].HeaderText = "Ngày kết thúc";
+                if (dgvTournaments.Columns["StatusText"] != null)
+                    dgvTournaments.Columns["StatusText"].HeaderText = "Trạng thái";
 
-                lblTotalTournaments.Text = $"Tổng số giải đã tham gia: {matchingTournaments.Count}";
+                // Bật lại AutoSize
+                dgvTournaments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                // 6. Cập nhật số lượng giải đấu
+                int ongoingCount = matchingTournaments.Count(t => t.Status == "ongoing");
+                int completedCount = matchingTournaments.Count(t => t.Status == "completed");
+
+                lblTotalTournaments.Text = $"🏆 Tổng số giải: {matchingTournaments.Count} (Đang tham gia: {ongoingCount} | Đã xong: {completedCount})";
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi tải giải đấu của cơ thủ: {ex.Message}", "Lỗi Supabase", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Lỗi tải danh sách giải đấu: {ex.Message}", "Lỗi Supabase", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        // Hàm hỗ trợ dịch trạng thái từ Database sang Tiếng Việt có Emoji sinh động
+        private string GetStatusDisplay(string status)
+        {
+            return status switch
+            {
+                "ongoing" => "🔴 Đang diễn ra",
+                "completed" => "✅ Đã kết thúc",
+                "draft" => "⏳ Sắp diễn ra",
+                "cancelled" => "❌ Đã hủy",
+                _ => status
+            };
         }
 
         private async void BtnAdd_Click(object sender, EventArgs e)
@@ -271,13 +312,6 @@ namespace PoolTournament
 
         #region Sự kiện Click vào Bảng & Đổ Dữ Liệu Lên Form
 
-        private void DgvPlayers_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                PopulateSelectedRowData();
-            }
-        }
 
         private void DgvPlayers_SelectionChanged(object sender, EventArgs e)
         {

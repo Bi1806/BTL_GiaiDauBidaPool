@@ -26,7 +26,7 @@ namespace PoolTournament
         public int MaxParticipants { get; set; }
 
         [Column("status")]
-        public string Status { get; set; }
+        public string Status { get; set; } // 'draft', 'ongoing', 'completed', 'cancelled'
 
         [Column("created_at")]
         public DateTime CreatedAt { get; set; }
