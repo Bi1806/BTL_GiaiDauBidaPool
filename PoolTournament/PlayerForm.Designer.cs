@@ -158,7 +158,10 @@
             dgvPlayers.AllowUserToDeleteRows = false;
             dgvPlayers.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(13, 37, 29);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(233, 243, 238);
             dataGridViewCellStyle1.Padding = new Padding(8, 0, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(29, 122, 85);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dgvPlayers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -168,20 +171,25 @@
             dgvPlayers.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvPlayers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(10, 56, 39);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(230, 184, 74);
             dataGridViewCellStyle2.Padding = new Padding(8, 0, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(10, 56, 39);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(230, 184, 74);
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvPlayers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvPlayers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(18, 48, 38);
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(233, 243, 238);
             dataGridViewCellStyle3.Padding = new Padding(8, 0, 0, 0);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(29, 122, 85);
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvPlayers.DefaultCellStyle = dataGridViewCellStyle3;
             dgvPlayers.Dock = DockStyle.Fill;
+            dgvPlayers.BackgroundColor = Color.FromArgb(16, 43, 34);
             dgvPlayers.EnableHeadersVisualStyles = false;
             dgvPlayers.GridColor = Color.FromArgb(28, 74, 57);
             dgvPlayers.Location = new Point(20, 83);
@@ -255,6 +263,7 @@
             lblName.Anchor = AnchorStyles.Left;
             lblName.AutoSize = true;
             lblName.BackColor = Color.Transparent;
+            lblName.ForeColor = Color.FromArgb(233, 243, 238);
             lblName.Location = new Point(4, 14);
             lblName.Margin = new Padding(4, 10, 14, 10);
             lblName.Name = "lblName";
@@ -265,7 +274,9 @@
             // txtFullName
             // 
             txtFullName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtFullName.BackColor = Color.FromArgb(11, 31, 24);
             txtFullName.BorderStyle = BorderStyle.FixedSingle;
+            txtFullName.ForeColor = Color.FromArgb(233, 243, 238);
             txtFullName.Location = new Point(143, 11);
             txtFullName.Margin = new Padding(4, 10, 29, 10);
             txtFullName.MinimumSize = new Size(199, 2);
@@ -279,6 +290,7 @@
             lblRank.Anchor = AnchorStyles.Left;
             lblRank.AutoSize = true;
             lblRank.BackColor = Color.Transparent;
+            lblRank.ForeColor = Color.FromArgb(233, 243, 238);
             lblRank.Location = new Point(415, 14);
             lblRank.Margin = new Padding(4, 10, 14, 10);
             lblRank.Name = "lblRank";
@@ -289,9 +301,11 @@
             // cbRankLevel
             // 
             cbRankLevel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cbRankLevel.BackColor = Color.FromArgb(11, 31, 24);
             cbRankLevel.DropDownStyle = ComboBoxStyle.DropDownList;
             cbRankLevel.FlatStyle = FlatStyle.Flat;
             cbRankLevel.FormattingEnabled = true;
+            cbRankLevel.ForeColor = Color.FromArgb(233, 243, 238);
             cbRankLevel.Items.AddRange(new object[] { "A", "B", "C", "D", "E", "F", "Chuyên nghiệp", "Nghiệp dư" });
             cbRankLevel.Location = new Point(549, 10);
             cbRankLevel.Margin = new Padding(4, 10, 4, 10);
@@ -319,6 +333,7 @@
             lblPhone.Anchor = AnchorStyles.Left;
             lblPhone.AutoSize = true;
             lblPhone.BackColor = Color.Transparent;
+            lblPhone.ForeColor = Color.FromArgb(233, 243, 238);
             lblPhone.Location = new Point(4, 67);
             lblPhone.Margin = new Padding(4, 10, 14, 10);
             lblPhone.Name = "lblPhone";
@@ -329,7 +344,9 @@
             // txtPhone
             // 
             txtPhone.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtPhone.BackColor = Color.FromArgb(11, 31, 24);
             txtPhone.BorderStyle = BorderStyle.FixedSingle;
+            txtPhone.ForeColor = Color.FromArgb(233, 243, 238);
             txtPhone.Location = new Point(143, 64);
             txtPhone.Margin = new Padding(4, 10, 29, 10);
             txtPhone.MinimumSize = new Size(199, 2);
@@ -343,6 +360,7 @@
             lblStatus.Anchor = AnchorStyles.Left;
             lblStatus.AutoSize = true;
             lblStatus.BackColor = Color.Transparent;
+            lblStatus.ForeColor = Color.FromArgb(233, 243, 238);
             lblStatus.Location = new Point(415, 67);
             lblStatus.Margin = new Padding(4, 10, 14, 10);
             lblStatus.Name = "lblStatus";
@@ -353,9 +371,11 @@
             // cbStatus
             // 
             cbStatus.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cbStatus.BackColor = Color.FromArgb(11, 31, 24);
             cbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cbStatus.FlatStyle = FlatStyle.Flat;
             cbStatus.FormattingEnabled = true;
+            cbStatus.ForeColor = Color.FromArgb(233, 243, 238);
             cbStatus.Items.AddRange(new object[] { "active", "suspended", "inactive" });
             cbStatus.Location = new Point(549, 63);
             cbStatus.Margin = new Padding(4, 10, 4, 10);
@@ -369,6 +389,7 @@
             lblEmail.Anchor = AnchorStyles.Left;
             lblEmail.AutoSize = true;
             lblEmail.BackColor = Color.Transparent;
+            lblEmail.ForeColor = Color.FromArgb(233, 243, 238);
             lblEmail.Location = new Point(4, 130);
             lblEmail.Margin = new Padding(4, 10, 14, 10);
             lblEmail.Name = "lblEmail";
@@ -379,7 +400,9 @@
             // txtEmail
             // 
             txtEmail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtEmail.BackColor = Color.FromArgb(11, 31, 24);
             txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.ForeColor = Color.FromArgb(233, 243, 238);
             txtEmail.Location = new Point(143, 127);
             txtEmail.Margin = new Padding(4, 10, 29, 10);
             txtEmail.MinimumSize = new Size(199, 2);
@@ -393,6 +416,7 @@
             lblAvatar.Anchor = AnchorStyles.Left;
             lblAvatar.AutoSize = true;
             lblAvatar.BackColor = Color.Transparent;
+            lblAvatar.ForeColor = Color.FromArgb(233, 243, 238);
             lblAvatar.Location = new Point(415, 130);
             lblAvatar.Margin = new Padding(4, 10, 14, 10);
             lblAvatar.Name = "lblAvatar";
@@ -426,8 +450,10 @@
             btnChooseAvatar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnChooseAvatar.BackColor = Color.FromArgb(24, 64, 49);
             btnChooseAvatar.Cursor = Cursors.Hand;
+            btnChooseAvatar.FlatAppearance.BorderColor = Color.FromArgb(38, 96, 71);
             btnChooseAvatar.FlatAppearance.MouseOverBackColor = Color.FromArgb(32, 86, 65);
             btnChooseAvatar.FlatStyle = FlatStyle.Flat;
+            btnChooseAvatar.ForeColor = Color.FromArgb(233, 243, 238);
             btnChooseAvatar.Location = new Point(4, 5);
             btnChooseAvatar.Margin = new Padding(4, 5, 11, 5);
             btnChooseAvatar.Name = "btnChooseAvatar";
@@ -441,7 +467,9 @@
             // txtAvatarUrl
             // 
             txtAvatarUrl.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtAvatarUrl.BackColor = Color.FromArgb(11, 31, 24);
             txtAvatarUrl.BorderStyle = BorderStyle.FixedSingle;
+            txtAvatarUrl.ForeColor = Color.FromArgb(154, 187, 172);
             txtAvatarUrl.Location = new Point(159, 16);
             txtAvatarUrl.Margin = new Padding(4, 10, 4, 10);
             txtAvatarUrl.MinimumSize = new Size(128, 2);
@@ -513,8 +541,10 @@
             btnClear.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnClear.BackColor = Color.FromArgb(28, 74, 57);
             btnClear.Cursor = Cursors.Hand;
+            btnClear.FlatAppearance.BorderColor = Color.FromArgb(38, 96, 71);
             btnClear.FlatAppearance.MouseOverBackColor = Color.FromArgb(38, 96, 71);
             btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.ForeColor = Color.FromArgb(233, 243, 238);
             btnClear.Location = new Point(327, 0);
             btnClear.Margin = new Padding(0, 0, 14, 0);
             btnClear.Name = "btnClear";
@@ -547,7 +577,10 @@
             dgvTournaments.AllowUserToDeleteRows = false;
             dgvTournaments.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(13, 37, 29);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(233, 243, 238);
             dataGridViewCellStyle4.Padding = new Padding(8, 0, 0, 0);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(29, 122, 85);
             dataGridViewCellStyle4.SelectionForeColor = Color.White;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dgvTournaments.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
@@ -557,20 +590,25 @@
             dgvTournaments.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvTournaments.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(10, 56, 39);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(230, 184, 74);
             dataGridViewCellStyle5.Padding = new Padding(8, 0, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(10, 56, 39);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(230, 184, 74);
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
             dgvTournaments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvTournaments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(18, 48, 38);
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(233, 243, 238);
             dataGridViewCellStyle6.Padding = new Padding(8, 0, 0, 0);
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(29, 122, 85);
             dataGridViewCellStyle6.SelectionForeColor = Color.White;
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             dgvTournaments.DefaultCellStyle = dataGridViewCellStyle6;
             dgvTournaments.Dock = DockStyle.Fill;
+            dgvTournaments.BackgroundColor = Color.FromArgb(16, 43, 34);
             dgvTournaments.EnableHeadersVisualStyles = false;
             dgvTournaments.GridColor = Color.FromArgb(28, 74, 57);
             dgvTournaments.Location = new Point(20, 177);
@@ -585,7 +623,9 @@
             // 
             // lblTotalTournaments
             // 
+            lblTotalTournaments.BackColor = Color.FromArgb(10, 56, 39);
             lblTotalTournaments.Dock = DockStyle.Top;
+            lblTotalTournaments.ForeColor = Color.FromArgb(230, 184, 74);
             lblTotalTournaments.Location = new Point(20, 107);
             lblTotalTournaments.Margin = new Padding(4, 0, 4, 0);
             lblTotalTournaments.Name = "lblTotalTournaments";
@@ -604,6 +644,7 @@
             Controls.Add(pnlFooter);
             Controls.Add(pnlHeader);
             Font = new Font("Segoe UI", 9F);
+            ForeColor = Color.FromArgb(233, 243, 238);
             Margin = new Padding(4, 5, 4, 5);
             MinimumSize = new Size(1476, 1063);
             Name = "PlayerForm";
