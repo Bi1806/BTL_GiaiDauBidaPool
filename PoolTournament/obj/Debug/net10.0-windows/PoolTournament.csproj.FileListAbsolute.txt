@@ -73,3 +73,4 @@ C:\Users\Acer Nitro\source\repos\BTL_GiaiDauBidaPool\PoolTournament\bin\Debug\ne
 C:\Users\Acer Nitro\source\repos\BTL_GiaiDauBidaPool\PoolTournament\obj\Debug\net10.0-windows\PoolTour.9EBAE711.Up2Date
 C:\Users\Acer Nitro\source\repos\BTL_GiaiDauBidaPool\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.genruntimeconfig.cache
 C:\Users\Acer Nitro\source\repos\BTL_GiaiDauBidaPool\PoolTournament\obj\Debug\net10.0-windows\ref\PoolTournament.dll
+C:\Users\Acer Nitro\source\repos\BTL_GiaiDauBidaPool\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.PlayerForm.resources

@@ -35,12 +35,17 @@ namespace PoolTournament
             TournamentForm tournamentForm = new TournamentForm();
             tournamentForm.Show();
         }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Close();
+        }
+
+        private void btnPlayers_Click(object sender, EventArgs e)
+        {
+            PlayerForm playerForm = new PlayerForm();
+            playerForm.Show();
         }
     }
 }

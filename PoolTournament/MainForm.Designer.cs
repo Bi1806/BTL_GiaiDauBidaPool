@@ -56,42 +56,47 @@
             pnlMenu.Controls.Add(btnPlayers);
             pnlMenu.Dock = DockStyle.Left;
             pnlMenu.Location = new Point(0, 0);
+            pnlMenu.Margin = new Padding(4, 4, 4, 4);
             pnlMenu.Name = "pnlMenu";
-            pnlMenu.Size = new Size(261, 653);
+            pnlMenu.Size = new Size(326, 816);
             pnlMenu.TabIndex = 0;
             // 
             // btnStatistics
             // 
-            btnStatistics.Location = new Point(80, 465);
+            btnStatistics.Location = new Point(100, 581);
+            btnStatistics.Margin = new Padding(4, 4, 4, 4);
             btnStatistics.Name = "btnStatistics";
-            btnStatistics.Size = new Size(94, 29);
+            btnStatistics.Size = new Size(118, 36);
             btnStatistics.TabIndex = 3;
             btnStatistics.Text = "Thống kê";
             btnStatistics.UseVisualStyleBackColor = true;
             // 
             // btnSchedule
             // 
-            btnSchedule.Location = new Point(80, 264);
+            btnSchedule.Location = new Point(100, 330);
+            btnSchedule.Margin = new Padding(4, 4, 4, 4);
             btnSchedule.Name = "btnSchedule";
-            btnSchedule.Size = new Size(94, 29);
+            btnSchedule.Size = new Size(118, 36);
             btnSchedule.TabIndex = 3;
             btnSchedule.Text = "Lịch thi đấu";
             btnSchedule.UseVisualStyleBackColor = true;
             // 
             // btnTables
             // 
-            btnTables.Location = new Point(80, 398);
+            btnTables.Location = new Point(100, 498);
+            btnTables.Margin = new Padding(4, 4, 4, 4);
             btnTables.Name = "btnTables";
-            btnTables.Size = new Size(94, 29);
+            btnTables.Size = new Size(118, 36);
             btnTables.TabIndex = 2;
             btnTables.Text = "Bàn đấu";
             btnTables.UseVisualStyleBackColor = true;
             // 
             // btnTournament
             // 
-            btnTournament.Location = new Point(80, 81);
+            btnTournament.Location = new Point(100, 101);
+            btnTournament.Margin = new Padding(4, 4, 4, 4);
             btnTournament.Name = "btnTournament";
-            btnTournament.Size = new Size(94, 29);
+            btnTournament.Size = new Size(118, 36);
             btnTournament.TabIndex = 2;
             btnTournament.Text = "Giải đấu";
             btnTournament.UseVisualStyleBackColor = true;
@@ -99,18 +104,20 @@
             // 
             // btnBracket
             // 
-            btnBracket.Location = new Point(80, 332);
+            btnBracket.Location = new Point(100, 415);
+            btnBracket.Margin = new Padding(4, 4, 4, 4);
             btnBracket.Name = "btnBracket";
-            btnBracket.Size = new Size(94, 29);
+            btnBracket.Size = new Size(118, 36);
             btnBracket.TabIndex = 1;
             btnBracket.Text = "Bracket";
             btnBracket.UseVisualStyleBackColor = true;
             // 
             // btnDraw
             // 
-            btnDraw.Location = new Point(80, 202);
+            btnDraw.Location = new Point(100, 252);
+            btnDraw.Margin = new Padding(4, 4, 4, 4);
             btnDraw.Name = "btnDraw";
-            btnDraw.Size = new Size(94, 29);
+            btnDraw.Size = new Size(118, 36);
             btnDraw.TabIndex = 2;
             btnDraw.Text = "Bốc thăm";
             btnDraw.UseVisualStyleBackColor = true;
@@ -119,20 +126,23 @@
             // 
             lblLogo.AutoSize = true;
             lblLogo.Font = new Font("Segoe UI", 14F);
-            lblLogo.Location = new Point(12, 28);
+            lblLogo.Location = new Point(15, 35);
+            lblLogo.Margin = new Padding(4, 0, 4, 0);
             lblLogo.Name = "lblLogo";
-            lblLogo.Size = new Size(239, 32);
+            lblLogo.Size = new Size(281, 38);
             lblLogo.TabIndex = 1;
             lblLogo.Text = "POOL TOURNAMENT";
             // 
             // btnPlayers
             // 
-            btnPlayers.Location = new Point(80, 140);
+            btnPlayers.Location = new Point(100, 175);
+            btnPlayers.Margin = new Padding(4, 4, 4, 4);
             btnPlayers.Name = "btnPlayers";
-            btnPlayers.Size = new Size(94, 29);
+            btnPlayers.Size = new Size(118, 36);
             btnPlayers.TabIndex = 1;
             btnPlayers.Text = "Cơ thủ";
             btnPlayers.UseVisualStyleBackColor = true;
+            btnPlayers.Click += btnPlayers_Click;
             // 
             // pnlContent
             // 
@@ -140,16 +150,18 @@
             pnlContent.Controls.Add(lblWelcome);
             pnlContent.Dock = DockStyle.Fill;
             pnlContent.Location = new Point(0, 0);
+            pnlContent.Margin = new Padding(4, 4, 4, 4);
             pnlContent.Name = "pnlContent";
-            pnlContent.Size = new Size(1182, 653);
+            pnlContent.Size = new Size(1478, 816);
             pnlContent.TabIndex = 1;
             // 
             // btnLogout
             // 
             btnLogout.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnLogout.Location = new Point(670, 140);
+            btnLogout.Location = new Point(838, 175);
+            btnLogout.Margin = new Padding(4, 4, 4, 4);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(94, 29);
+            btnLogout.Size = new Size(118, 36);
             btnLogout.TabIndex = 1;
             btnLogout.Text = "Đăng xuất";
             btnLogout.UseVisualStyleBackColor = true;
@@ -159,19 +171,21 @@
             // 
             lblWelcome.AutoSize = true;
             lblWelcome.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            lblWelcome.Location = new Point(300, 28);
+            lblWelcome.Location = new Point(375, 35);
+            lblWelcome.Margin = new Padding(4, 0, 4, 0);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(618, 46);
+            lblWelcome.Size = new Size(726, 54);
             lblWelcome.TabIndex = 0;
             lblWelcome.Text = "Chào mừng đến với Pool Tournament";
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1182, 653);
+            ClientSize = new Size(1478, 816);
             Controls.Add(pnlMenu);
             Controls.Add(pnlContent);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "POOL TOURNAMENT MANAGEMENT";
