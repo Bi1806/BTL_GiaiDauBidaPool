@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BTL_BIDA\\PoolTournament\\PoolTournament.csproj": {}
+    "D:\\BTL_BiDa\\PoolTournament\\PoolTournament.csproj": {}
   },
   "projects": {
-    "D:\\BTL_BIDA\\PoolTournament\\PoolTournament.csproj": {
+    "D:\\BTL_BiDa\\PoolTournament\\PoolTournament.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BTL_BIDA\\PoolTournament\\PoolTournament.csproj",
+        "projectUniqueName": "D:\\BTL_BiDa\\PoolTournament\\PoolTournament.csproj",
         "projectName": "PoolTournament",
-        "projectPath": "D:\\BTL_BIDA\\PoolTournament\\PoolTournament.csproj",
+        "projectPath": "D:\\BTL_BiDa\\PoolTournament\\PoolTournament.csproj",
         "packagesPath": "C:\\Users\\Giang\\.nuget\\packages\\",
-        "outputPath": "D:\\BTL_BIDA\\PoolTournament\\obj\\",
+        "outputPath": "D:\\BTL_BiDa\\PoolTournament\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Supabase;
 
-namespace PoolTournament
+namespace PoolTournament.Models
 {
     public static class SupabaseClient
     {

@@ -2,7 +2,7 @@
 using Postgrest.Models;
 using System;
 
-namespace PoolTournament
+namespace PoolTournament.Models
 {
     [Table("tournament_participants")]
     public class TournamentParticipantModel : BaseModel

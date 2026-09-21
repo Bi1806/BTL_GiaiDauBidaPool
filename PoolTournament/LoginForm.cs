@@ -27,8 +27,6 @@ namespace PoolTournament
             this.Resize += LoginForm_Resize;
             this.AcceptButton = btnLogin;
 
-            // Đăng ký sự kiện Click cho nút Đăng Nhập
-            this.btnLogin.Click += btnLogin_Click;
         }
 
         private GraphicsPath GetRoundedPath(Rectangle rect, int radius)

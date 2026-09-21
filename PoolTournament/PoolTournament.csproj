@@ -18,4 +18,13 @@
 		<PackageReference Include="supabase-csharp" Version="0.16.2" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="img\background.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="img\logo.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
 </Project>

@@ -2,7 +2,7 @@
 using Postgrest.Attributes; // Sửa từ Supabase.Postgrest.Attributes
 using Postgrest.Models;     // Sửa từ Supabase.Postgrest.Models
 
-namespace PoolTournament
+namespace PoolTournament.Models
 {
     [Table("players")]
     public class PlayerModel : BaseModel

@@ -99,7 +99,6 @@ D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.csproj.Assem
 D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.LoginForm.resources
 D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.MainForm.resources
 D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.PlayerForm.resources
-D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.RegisterUser.resources
 D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.TournamentForm.resources
 D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.csproj.GenerateResource.cache
 D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.GeneratedMSBuildEditorConfig.editorconfig
@@ -113,3 +112,7 @@ D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\refint\PoolTournament.dll
 D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.pdb
 D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.genruntimeconfig.cache
 D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\ref\PoolTournament.dll
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.RegisterForm.resources
+D:\BTL_BiDa\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.Forms.DrawForm.resources
+D:\BTL_BiDa\PoolTournament\bin\Debug\net10.0-windows\img\background.png
+D:\BTL_BiDa\PoolTournament\bin\Debug\net10.0-windows\img\logo.png

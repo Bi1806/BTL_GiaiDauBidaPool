@@ -87,19 +87,17 @@
             // 
             pnlHeader.Dock = DockStyle.Top;
             pnlHeader.Location = new Point(0, 0);
-            pnlHeader.Margin = new Padding(4, 5, 4, 5);
             pnlHeader.Name = "pnlHeader";
-            pnlHeader.Size = new Size(1829, 140);
+            pnlHeader.Size = new Size(1078, 84);
             pnlHeader.TabIndex = 10;
             pnlHeader.Paint += PoolHeader_Paint;
             // 
             // pnlFooter
             // 
             pnlFooter.Dock = DockStyle.Bottom;
-            pnlFooter.Location = new Point(0, 1123);
-            pnlFooter.Margin = new Padding(4, 5, 4, 5);
+            pnlFooter.Location = new Point(0, 461);
             pnlFooter.Name = "pnlFooter";
-            pnlFooter.Size = new Size(1829, 77);
+            pnlFooter.Size = new Size(1078, 46);
             pnlFooter.TabIndex = 11;
             pnlFooter.Paint += PoolFooter_Paint;
             // 
@@ -107,11 +105,10 @@
             // 
             pnlContent.Controls.Add(splitContainer);
             pnlContent.Dock = DockStyle.Fill;
-            pnlContent.Location = new Point(0, 140);
-            pnlContent.Margin = new Padding(4, 5, 4, 5);
+            pnlContent.Location = new Point(0, 84);
             pnlContent.Name = "pnlContent";
-            pnlContent.Padding = new Padding(20, 20, 20, 20);
-            pnlContent.Size = new Size(1829, 983);
+            pnlContent.Padding = new Padding(14, 12, 14, 12);
+            pnlContent.Size = new Size(1078, 377);
             pnlContent.TabIndex = 12;
             pnlContent.Paint += PoolFelt_Paint;
             // 
@@ -119,8 +116,7 @@
             // 
             splitContainer.BackColor = Color.Transparent;
             splitContainer.Dock = DockStyle.Fill;
-            splitContainer.Location = new Point(20, 20);
-            splitContainer.Margin = new Padding(4, 5, 4, 5);
+            splitContainer.Location = new Point(14, 12);
             splitContainer.Name = "splitContainer";
             // 
             // splitContainer.Panel1
@@ -133,9 +129,9 @@
             // 
             splitContainer.Panel2.Controls.Add(gbTournaments);
             splitContainer.Panel2MinSize = 260;
-            splitContainer.Size = new Size(1789, 943);
-            splitContainer.SplitterDistance = 1114;
-            splitContainer.SplitterWidth = 14;
+            splitContainer.Size = new Size(1050, 353);
+            splitContainer.SplitterDistance = 653;
+            splitContainer.SplitterWidth = 10;
             splitContainer.TabIndex = 0;
             // 
             // pnlPlayersCard
@@ -143,11 +139,10 @@
             pnlPlayersCard.BackColor = Color.Transparent;
             pnlPlayersCard.Controls.Add(dgvPlayers);
             pnlPlayersCard.Dock = DockStyle.Fill;
-            pnlPlayersCard.Location = new Point(0, 400);
-            pnlPlayersCard.Margin = new Padding(4, 5, 4, 5);
+            pnlPlayersCard.Location = new Point(0, 258);
             pnlPlayersCard.Name = "pnlPlayersCard";
-            pnlPlayersCard.Padding = new Padding(20, 83, 20, 23);
-            pnlPlayersCard.Size = new Size(1114, 543);
+            pnlPlayersCard.Padding = new Padding(14, 50, 14, 14);
+            pnlPlayersCard.Size = new Size(653, 95);
             pnlPlayersCard.TabIndex = 1;
             pnlPlayersCard.Tag = "8|DANH SÁCH CƠ THỦ";
             pnlPlayersCard.Paint += PoolCard_Paint;
@@ -167,6 +162,7 @@
             dgvPlayers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvPlayers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPlayers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvPlayers.BackgroundColor = Color.FromArgb(16, 43, 34);
             dgvPlayers.BorderStyle = BorderStyle.None;
             dgvPlayers.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvPlayers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -189,18 +185,16 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvPlayers.DefaultCellStyle = dataGridViewCellStyle3;
             dgvPlayers.Dock = DockStyle.Fill;
-            dgvPlayers.BackgroundColor = Color.FromArgb(16, 43, 34);
             dgvPlayers.EnableHeadersVisualStyles = false;
             dgvPlayers.GridColor = Color.FromArgb(28, 74, 57);
-            dgvPlayers.Location = new Point(20, 83);
-            dgvPlayers.Margin = new Padding(4, 5, 4, 5);
+            dgvPlayers.Location = new Point(14, 50);
             dgvPlayers.MultiSelect = false;
             dgvPlayers.Name = "dgvPlayers";
             dgvPlayers.ReadOnly = true;
             dgvPlayers.RowHeadersVisible = false;
             dgvPlayers.RowHeadersWidth = 62;
             dgvPlayers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPlayers.Size = new Size(1074, 437);
+            dgvPlayers.Size = new Size(625, 31);
             dgvPlayers.TabIndex = 1;
             dgvPlayers.SelectionChanged += DgvPlayers_SelectionChanged;
             // 
@@ -212,10 +206,9 @@
             gbPlayerInfo.Controls.Add(tlpInfo);
             gbPlayerInfo.Dock = DockStyle.Top;
             gbPlayerInfo.Location = new Point(0, 0);
-            gbPlayerInfo.Margin = new Padding(4, 5, 4, 5);
             gbPlayerInfo.Name = "gbPlayerInfo";
-            gbPlayerInfo.Padding = new Padding(29, 87, 29, 30);
-            gbPlayerInfo.Size = new Size(1114, 400);
+            gbPlayerInfo.Padding = new Padding(20, 52, 20, 18);
+            gbPlayerInfo.Size = new Size(653, 258);
             gbPlayerInfo.TabIndex = 0;
             gbPlayerInfo.TabStop = false;
             gbPlayerInfo.Tag = "9|THÔNG TIN CHI TIẾT CƠ THỦ";
@@ -247,15 +240,14 @@
             tlpInfo.Controls.Add(tlpAvatarPick, 3, 2);
             tlpInfo.Controls.Add(flpButtons, 1, 3);
             tlpInfo.Dock = DockStyle.Top;
-            tlpInfo.Location = new Point(29, 111);
-            tlpInfo.Margin = new Padding(4, 5, 4, 5);
+            tlpInfo.Location = new Point(20, 68);
             tlpInfo.Name = "tlpInfo";
             tlpInfo.RowCount = 4;
             tlpInfo.RowStyles.Add(new RowStyle());
             tlpInfo.RowStyles.Add(new RowStyle());
             tlpInfo.RowStyles.Add(new RowStyle());
             tlpInfo.RowStyles.Add(new RowStyle());
-            tlpInfo.Size = new Size(1056, 259);
+            tlpInfo.Size = new Size(613, 172);
             tlpInfo.TabIndex = 0;
             // 
             // lblName
@@ -264,10 +256,10 @@
             lblName.AutoSize = true;
             lblName.BackColor = Color.Transparent;
             lblName.ForeColor = Color.FromArgb(233, 243, 238);
-            lblName.Location = new Point(4, 14);
-            lblName.Margin = new Padding(4, 10, 14, 10);
+            lblName.Location = new Point(3, 10);
+            lblName.Margin = new Padding(3, 6, 10, 6);
             lblName.Name = "lblName";
-            lblName.Size = new Size(93, 25);
+            lblName.Size = new Size(61, 15);
             lblName.TabIndex = 0;
             lblName.Text = "Họ và tên:";
             // 
@@ -277,12 +269,12 @@
             txtFullName.BackColor = Color.FromArgb(11, 31, 24);
             txtFullName.BorderStyle = BorderStyle.FixedSingle;
             txtFullName.ForeColor = Color.FromArgb(233, 243, 238);
-            txtFullName.Location = new Point(143, 11);
-            txtFullName.Margin = new Padding(4, 10, 29, 10);
-            txtFullName.MinimumSize = new Size(199, 2);
+            txtFullName.Location = new Point(95, 6);
+            txtFullName.Margin = new Padding(3, 6, 20, 6);
+            txtFullName.MinimumSize = new Size(140, 2);
             txtFullName.Name = "txtFullName";
             txtFullName.PlaceholderText = "Nhập tên cơ thủ...";
-            txtFullName.Size = new Size(239, 31);
+            txtFullName.Size = new Size(140, 23);
             txtFullName.TabIndex = 1;
             // 
             // lblRank
@@ -291,10 +283,10 @@
             lblRank.AutoSize = true;
             lblRank.BackColor = Color.Transparent;
             lblRank.ForeColor = Color.FromArgb(233, 243, 238);
-            lblRank.Location = new Point(415, 14);
-            lblRank.Margin = new Padding(4, 10, 14, 10);
+            lblRank.Location = new Point(227, 10);
+            lblRank.Margin = new Padding(3, 6, 10, 6);
             lblRank.Name = "lblRank";
-            lblRank.Size = new Size(113, 25);
+            lblRank.Size = new Size(76, 15);
             lblRank.TabIndex = 2;
             lblRank.Text = "Hạng (Rank):";
             // 
@@ -304,25 +296,25 @@
             cbRankLevel.BackColor = Color.FromArgb(11, 31, 24);
             cbRankLevel.DropDownStyle = ComboBoxStyle.DropDownList;
             cbRankLevel.FlatStyle = FlatStyle.Flat;
-            cbRankLevel.FormattingEnabled = true;
             cbRankLevel.ForeColor = Color.FromArgb(233, 243, 238);
+            cbRankLevel.FormattingEnabled = true;
             cbRankLevel.Items.AddRange(new object[] { "A", "B", "C", "D", "E", "F", "Chuyên nghiệp", "Nghiệp dư" });
-            cbRankLevel.Location = new Point(549, 10);
-            cbRankLevel.Margin = new Padding(4, 10, 4, 10);
-            cbRankLevel.MinimumSize = new Size(198, 0);
+            cbRankLevel.Location = new Point(317, 6);
+            cbRankLevel.Margin = new Padding(3, 6, 3, 6);
+            cbRankLevel.MinimumSize = new Size(140, 0);
             cbRankLevel.Name = "cbRankLevel";
-            cbRankLevel.Size = new Size(264, 33);
+            cbRankLevel.Size = new Size(140, 23);
             cbRankLevel.TabIndex = 3;
             // 
             // picAvatar
             // 
             picAvatar.Anchor = AnchorStyles.Top;
             picAvatar.BackColor = Color.Transparent;
-            picAvatar.Location = new Point(846, 5);
-            picAvatar.Margin = new Padding(29, 5, 9, 5);
+            picAvatar.Location = new Point(466, 3);
+            picAvatar.Margin = new Padding(20, 3, 6, 3);
             picAvatar.Name = "picAvatar";
             tlpInfo.SetRowSpan(picAvatar, 4);
-            picAvatar.Size = new Size(200, 233);
+            picAvatar.Size = new Size(140, 140);
             picAvatar.SizeMode = PictureBoxSizeMode.Zoom;
             picAvatar.TabIndex = 13;
             picAvatar.TabStop = false;
@@ -334,10 +326,10 @@
             lblPhone.AutoSize = true;
             lblPhone.BackColor = Color.Transparent;
             lblPhone.ForeColor = Color.FromArgb(233, 243, 238);
-            lblPhone.Location = new Point(4, 67);
-            lblPhone.Margin = new Padding(4, 10, 14, 10);
+            lblPhone.Location = new Point(3, 45);
+            lblPhone.Margin = new Padding(3, 6, 10, 6);
             lblPhone.Name = "lblPhone";
-            lblPhone.Size = new Size(121, 25);
+            lblPhone.Size = new Size(79, 15);
             lblPhone.TabIndex = 4;
             lblPhone.Text = "Số điện thoại:";
             // 
@@ -347,12 +339,12 @@
             txtPhone.BackColor = Color.FromArgb(11, 31, 24);
             txtPhone.BorderStyle = BorderStyle.FixedSingle;
             txtPhone.ForeColor = Color.FromArgb(233, 243, 238);
-            txtPhone.Location = new Point(143, 64);
-            txtPhone.Margin = new Padding(4, 10, 29, 10);
-            txtPhone.MinimumSize = new Size(199, 2);
+            txtPhone.Location = new Point(95, 41);
+            txtPhone.Margin = new Padding(3, 6, 20, 6);
+            txtPhone.MinimumSize = new Size(140, 2);
             txtPhone.Name = "txtPhone";
             txtPhone.PlaceholderText = "09xx xxx xxx";
-            txtPhone.Size = new Size(239, 31);
+            txtPhone.Size = new Size(140, 23);
             txtPhone.TabIndex = 5;
             // 
             // lblStatus
@@ -361,10 +353,10 @@
             lblStatus.AutoSize = true;
             lblStatus.BackColor = Color.Transparent;
             lblStatus.ForeColor = Color.FromArgb(233, 243, 238);
-            lblStatus.Location = new Point(415, 67);
-            lblStatus.Margin = new Padding(4, 10, 14, 10);
+            lblStatus.Location = new Point(227, 45);
+            lblStatus.Margin = new Padding(3, 6, 10, 6);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(93, 25);
+            lblStatus.Size = new Size(63, 15);
             lblStatus.TabIndex = 6;
             lblStatus.Text = "Trạng thái:";
             // 
@@ -374,14 +366,14 @@
             cbStatus.BackColor = Color.FromArgb(11, 31, 24);
             cbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cbStatus.FlatStyle = FlatStyle.Flat;
-            cbStatus.FormattingEnabled = true;
             cbStatus.ForeColor = Color.FromArgb(233, 243, 238);
+            cbStatus.FormattingEnabled = true;
             cbStatus.Items.AddRange(new object[] { "active", "suspended", "inactive" });
-            cbStatus.Location = new Point(549, 63);
-            cbStatus.Margin = new Padding(4, 10, 4, 10);
-            cbStatus.MinimumSize = new Size(198, 0);
+            cbStatus.Location = new Point(317, 41);
+            cbStatus.Margin = new Padding(3, 6, 3, 6);
+            cbStatus.MinimumSize = new Size(140, 0);
             cbStatus.Name = "cbStatus";
-            cbStatus.Size = new Size(264, 33);
+            cbStatus.Size = new Size(140, 23);
             cbStatus.TabIndex = 7;
             // 
             // lblEmail
@@ -390,10 +382,10 @@
             lblEmail.AutoSize = true;
             lblEmail.BackColor = Color.Transparent;
             lblEmail.ForeColor = Color.FromArgb(233, 243, 238);
-            lblEmail.Location = new Point(4, 130);
-            lblEmail.Margin = new Padding(4, 10, 14, 10);
+            lblEmail.Location = new Point(3, 87);
+            lblEmail.Margin = new Padding(3, 6, 10, 6);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(58, 25);
+            lblEmail.Size = new Size(39, 15);
             lblEmail.TabIndex = 8;
             lblEmail.Text = "Email:";
             // 
@@ -403,12 +395,12 @@
             txtEmail.BackColor = Color.FromArgb(11, 31, 24);
             txtEmail.BorderStyle = BorderStyle.FixedSingle;
             txtEmail.ForeColor = Color.FromArgb(233, 243, 238);
-            txtEmail.Location = new Point(143, 127);
-            txtEmail.Margin = new Padding(4, 10, 29, 10);
-            txtEmail.MinimumSize = new Size(199, 2);
+            txtEmail.Location = new Point(95, 83);
+            txtEmail.Margin = new Padding(3, 6, 20, 6);
+            txtEmail.MinimumSize = new Size(140, 2);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "email@example.com";
-            txtEmail.Size = new Size(239, 31);
+            txtEmail.Size = new Size(140, 23);
             txtEmail.TabIndex = 9;
             // 
             // lblAvatar
@@ -417,10 +409,10 @@
             lblAvatar.AutoSize = true;
             lblAvatar.BackColor = Color.Transparent;
             lblAvatar.ForeColor = Color.FromArgb(233, 243, 238);
-            lblAvatar.Location = new Point(415, 130);
-            lblAvatar.Margin = new Padding(4, 10, 14, 10);
+            lblAvatar.Location = new Point(227, 87);
+            lblAvatar.Margin = new Padding(3, 6, 10, 6);
             lblAvatar.Name = "lblAvatar";
-            lblAvatar.Size = new Size(116, 25);
+            lblAvatar.Size = new Size(77, 15);
             lblAvatar.TabIndex = 10;
             lblAvatar.Text = "Ảnh đại diện:";
             // 
@@ -435,12 +427,12 @@
             tlpAvatarPick.Controls.Add(btnChooseAvatar, 0, 0);
             tlpAvatarPick.Controls.Add(txtAvatarUrl, 1, 0);
             tlpAvatarPick.Dock = DockStyle.Fill;
-            tlpAvatarPick.Location = new Point(545, 111);
-            tlpAvatarPick.Margin = new Padding(0, 5, 0, 5);
+            tlpAvatarPick.Location = new Point(314, 73);
+            tlpAvatarPick.Margin = new Padding(0, 3, 0, 3);
             tlpAvatarPick.Name = "tlpAvatarPick";
             tlpAvatarPick.RowCount = 1;
             tlpAvatarPick.RowStyles.Add(new RowStyle());
-            tlpAvatarPick.Size = new Size(272, 63);
+            tlpAvatarPick.Size = new Size(132, 43);
             tlpAvatarPick.TabIndex = 11;
             // 
             // btnChooseAvatar
@@ -454,11 +446,11 @@
             btnChooseAvatar.FlatAppearance.MouseOverBackColor = Color.FromArgb(32, 86, 65);
             btnChooseAvatar.FlatStyle = FlatStyle.Flat;
             btnChooseAvatar.ForeColor = Color.FromArgb(233, 243, 238);
-            btnChooseAvatar.Location = new Point(4, 5);
-            btnChooseAvatar.Margin = new Padding(4, 5, 11, 5);
+            btnChooseAvatar.Location = new Point(3, 3);
+            btnChooseAvatar.Margin = new Padding(3, 3, 8, 3);
             btnChooseAvatar.Name = "btnChooseAvatar";
-            btnChooseAvatar.Padding = new Padding(14, 8, 14, 8);
-            btnChooseAvatar.Size = new Size(140, 53);
+            btnChooseAvatar.Padding = new Padding(10, 5, 10, 5);
+            btnChooseAvatar.Size = new Size(100, 37);
             btnChooseAvatar.TabIndex = 11;
             btnChooseAvatar.Text = "Chọn ảnh...";
             btnChooseAvatar.UseVisualStyleBackColor = false;
@@ -470,13 +462,13 @@
             txtAvatarUrl.BackColor = Color.FromArgb(11, 31, 24);
             txtAvatarUrl.BorderStyle = BorderStyle.FixedSingle;
             txtAvatarUrl.ForeColor = Color.FromArgb(154, 187, 172);
-            txtAvatarUrl.Location = new Point(159, 16);
-            txtAvatarUrl.Margin = new Padding(4, 10, 4, 10);
-            txtAvatarUrl.MinimumSize = new Size(128, 2);
+            txtAvatarUrl.Location = new Point(114, 10);
+            txtAvatarUrl.Margin = new Padding(3, 6, 3, 6);
+            txtAvatarUrl.MinimumSize = new Size(90, 2);
             txtAvatarUrl.Name = "txtAvatarUrl";
             txtAvatarUrl.PlaceholderText = "Đường dẫn...";
             txtAvatarUrl.ReadOnly = true;
-            txtAvatarUrl.Size = new Size(128, 31);
+            txtAvatarUrl.Size = new Size(90, 23);
             txtAvatarUrl.TabIndex = 12;
             // 
             // flpButtons
@@ -488,10 +480,10 @@
             flpButtons.Controls.Add(btnAdd);
             flpButtons.Controls.Add(btnUpdate);
             flpButtons.Controls.Add(btnClear);
-            flpButtons.Location = new Point(139, 196);
-            flpButtons.Margin = new Padding(0, 17, 0, 0);
+            flpButtons.Location = new Point(92, 129);
+            flpButtons.Margin = new Padding(0, 10, 0, 0);
             flpButtons.Name = "flpButtons";
-            flpButtons.Size = new Size(486, 63);
+            flpButtons.Size = new Size(341, 43);
             flpButtons.TabIndex = 14;
             flpButtons.WrapContents = false;
             // 
@@ -506,10 +498,10 @@
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.ForeColor = Color.White;
             btnAdd.Location = new Point(0, 0);
-            btnAdd.Margin = new Padding(0, 0, 14, 0);
+            btnAdd.Margin = new Padding(0, 0, 10, 0);
             btnAdd.Name = "btnAdd";
-            btnAdd.Padding = new Padding(26, 13, 26, 13);
-            btnAdd.Size = new Size(154, 61);
+            btnAdd.Padding = new Padding(18, 8, 18, 8);
+            btnAdd.Size = new Size(108, 41);
             btnAdd.TabIndex = 14;
             btnAdd.Text = "Thêm mới";
             btnAdd.UseVisualStyleBackColor = false;
@@ -525,11 +517,11 @@
             btnUpdate.FlatAppearance.MouseOverBackColor = Color.FromArgb(234, 179, 8);
             btnUpdate.FlatStyle = FlatStyle.Flat;
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(168, 0);
-            btnUpdate.Margin = new Padding(0, 0, 14, 0);
+            btnUpdate.Location = new Point(118, 0);
+            btnUpdate.Margin = new Padding(0, 0, 10, 0);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Padding = new Padding(26, 13, 26, 13);
-            btnUpdate.Size = new Size(145, 61);
+            btnUpdate.Padding = new Padding(18, 8, 18, 8);
+            btnUpdate.Size = new Size(101, 41);
             btnUpdate.TabIndex = 15;
             btnUpdate.Text = "Cập nhật";
             btnUpdate.UseVisualStyleBackColor = false;
@@ -545,11 +537,11 @@
             btnClear.FlatAppearance.MouseOverBackColor = Color.FromArgb(38, 96, 71);
             btnClear.FlatStyle = FlatStyle.Flat;
             btnClear.ForeColor = Color.FromArgb(233, 243, 238);
-            btnClear.Location = new Point(327, 0);
-            btnClear.Margin = new Padding(0, 0, 14, 0);
+            btnClear.Location = new Point(229, 0);
+            btnClear.Margin = new Padding(0, 0, 10, 0);
             btnClear.Name = "btnClear";
-            btnClear.Padding = new Padding(26, 13, 26, 13);
-            btnClear.Size = new Size(145, 63);
+            btnClear.Padding = new Padding(18, 8, 18, 8);
+            btnClear.Size = new Size(102, 43);
             btnClear.TabIndex = 16;
             btnClear.Text = "Làm mới";
             btnClear.UseVisualStyleBackColor = false;
@@ -562,10 +554,9 @@
             gbTournaments.Controls.Add(lblTotalTournaments);
             gbTournaments.Dock = DockStyle.Fill;
             gbTournaments.Location = new Point(0, 0);
-            gbTournaments.Margin = new Padding(4, 5, 4, 5);
             gbTournaments.Name = "gbTournaments";
-            gbTournaments.Padding = new Padding(20, 83, 20, 23);
-            gbTournaments.Size = new Size(661, 943);
+            gbTournaments.Padding = new Padding(14, 50, 14, 14);
+            gbTournaments.Size = new Size(387, 353);
             gbTournaments.TabIndex = 0;
             gbTournaments.TabStop = false;
             gbTournaments.Tag = "1|GIẢI ĐẤU ĐÃ & ĐANG THAM GIA";
@@ -586,6 +577,7 @@
             dgvTournaments.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvTournaments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTournaments.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvTournaments.BackgroundColor = Color.FromArgb(16, 43, 34);
             dgvTournaments.BorderStyle = BorderStyle.None;
             dgvTournaments.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvTournaments.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -608,17 +600,15 @@
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             dgvTournaments.DefaultCellStyle = dataGridViewCellStyle6;
             dgvTournaments.Dock = DockStyle.Fill;
-            dgvTournaments.BackgroundColor = Color.FromArgb(16, 43, 34);
             dgvTournaments.EnableHeadersVisualStyles = false;
             dgvTournaments.GridColor = Color.FromArgb(28, 74, 57);
-            dgvTournaments.Location = new Point(20, 177);
-            dgvTournaments.Margin = new Padding(4, 5, 4, 5);
+            dgvTournaments.Location = new Point(14, 108);
             dgvTournaments.Name = "dgvTournaments";
             dgvTournaments.ReadOnly = true;
             dgvTournaments.RowHeadersVisible = false;
             dgvTournaments.RowHeadersWidth = 62;
             dgvTournaments.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTournaments.Size = new Size(621, 743);
+            dgvTournaments.Size = new Size(359, 231);
             dgvTournaments.TabIndex = 1;
             // 
             // lblTotalTournaments
@@ -626,27 +616,25 @@
             lblTotalTournaments.BackColor = Color.FromArgb(10, 56, 39);
             lblTotalTournaments.Dock = DockStyle.Top;
             lblTotalTournaments.ForeColor = Color.FromArgb(230, 184, 74);
-            lblTotalTournaments.Location = new Point(20, 107);
-            lblTotalTournaments.Margin = new Padding(4, 0, 4, 0);
+            lblTotalTournaments.Location = new Point(14, 66);
             lblTotalTournaments.Name = "lblTotalTournaments";
-            lblTotalTournaments.Padding = new Padding(17, 13, 17, 13);
-            lblTotalTournaments.Size = new Size(621, 70);
+            lblTotalTournaments.Padding = new Padding(12, 8, 12, 8);
+            lblTotalTournaments.Size = new Size(359, 42);
             lblTotalTournaments.TabIndex = 2;
             lblTotalTournaments.Text = "Tổng số giải đã tham gia: 0";
             lblTotalTournaments.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // PlayerForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1829, 1200);
+            ClientSize = new Size(1078, 507);
             Controls.Add(pnlContent);
             Controls.Add(pnlFooter);
             Controls.Add(pnlHeader);
             Font = new Font("Segoe UI", 9F);
             ForeColor = Color.FromArgb(233, 243, 238);
-            Margin = new Padding(4, 5, 4, 5);
-            MinimumSize = new Size(1476, 1063);
+            MinimumSize = new Size(1038, 504);
             Name = "PlayerForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "POOL CLUB • QUẢN LÝ CƠ THỦ VÀ LỊCH SỬ THAM GIA GIẢI ĐẤU";
