@@ -74,3 +74,42 @@ C:\Users\Acer Nitro\source\repos\BTL_GiaiDauBidaPool\PoolTournament\obj\Debug\ne
 C:\Users\Acer Nitro\source\repos\BTL_GiaiDauBidaPool\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.genruntimeconfig.cache
 C:\Users\Acer Nitro\source\repos\BTL_GiaiDauBidaPool\PoolTournament\obj\Debug\net10.0-windows\ref\PoolTournament.dll
 C:\Users\Acer Nitro\source\repos\BTL_GiaiDauBidaPool\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.PlayerForm.resources
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\PoolTournament.exe
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\PoolTournament.deps.json
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\PoolTournament.runtimeconfig.json
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\PoolTournament.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\PoolTournament.pdb
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Supabase.Functions.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Supabase.Gotrue.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\MimeMapping.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Newtonsoft.Json.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Supabase.Postgrest.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Supabase.Realtime.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Supabase.Core.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Supabase.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Supabase.Storage.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\System.Reactive.dll
+D:\BTL_BIDA\PoolTournament\bin\Debug\net10.0-windows\Websocket.Client.dll
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.csproj.AssemblyReference.cache
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.LoginForm.resources
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.MainForm.resources
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.PlayerForm.resources
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.RegisterUser.resources
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.TournamentForm.resources
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.csproj.GenerateResource.cache
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.GeneratedMSBuildEditorConfig.editorconfig
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.AssemblyInfoInputs.cache
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.AssemblyInfo.cs
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.csproj.CoreCompileInputs.cache
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.sourcelink.json
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTour.9EBAE711.Up2Date
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.dll
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\refint\PoolTournament.dll
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.pdb
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\PoolTournament.genruntimeconfig.cache
+D:\BTL_BIDA\PoolTournament\obj\Debug\net10.0-windows\ref\PoolTournament.dll
