@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BTL_BiDa\\PoolTournament\\PoolTournament.csproj": {}
+    "D:\\BTLon_Bida\\PoolTournament\\PoolTournament.csproj": {}
   },
   "projects": {
-    "D:\\BTL_BiDa\\PoolTournament\\PoolTournament.csproj": {
+    "D:\\BTLon_Bida\\PoolTournament\\PoolTournament.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BTL_BiDa\\PoolTournament\\PoolTournament.csproj",
+        "projectUniqueName": "D:\\BTLon_Bida\\PoolTournament\\PoolTournament.csproj",
         "projectName": "PoolTournament",
-        "projectPath": "D:\\BTL_BiDa\\PoolTournament\\PoolTournament.csproj",
+        "projectPath": "D:\\BTLon_Bida\\PoolTournament\\PoolTournament.csproj",
         "packagesPath": "C:\\Users\\Giang\\.nuget\\packages\\",
-        "outputPath": "D:\\BTL_BiDa\\PoolTournament\\obj\\",
+        "outputPath": "D:\\BTLon_Bida\\PoolTournament\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -77,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
