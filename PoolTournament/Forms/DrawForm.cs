@@ -282,6 +282,9 @@ namespace PoolTournament.Forms
             await LoadPlayersAsync();
 
             lstResult.Items.Clear();
+
+              hasDrawn = false;
+              btnDraw.Enabled = true;
         }
     }
 }
