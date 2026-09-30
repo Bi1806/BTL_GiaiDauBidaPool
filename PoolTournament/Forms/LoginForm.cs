@@ -1,6 +1,7 @@
 using PoolTournament.Models;
 using System;
 using System.Drawing;
+using PoolTournament.Forms;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -27,6 +28,10 @@ namespace PoolTournament
 
             this.Resize += LoginForm_Resize;
             this.AcceptButton = btnLogin;
+
+            // Đăng ký sự kiện Click cho nút Đăng Nhập
+       //     this.btnLogin.Click += btnLogin_Click;
+
 
         }
 
@@ -150,11 +155,23 @@ namespace PoolTournament
             txtPassword.Font = new Font("Segoe UI", 11, FontStyle.Regular);
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.PlaceholderText = "Nhập mật khẩu...";
-            txtPassword.PasswordChar = '●';
+            txtPassword.UseSystemPasswordChar = true; // SỬA ĐỂ HIỂN THỊ DẠNG MẬT KHẨU CHUẨN
+                                                      //  txtPassword.PasswordChar = '●';
             txtPassword.Width = 330;
             txtPassword.Left = 50;
             txtPassword.Top = 325;
             txtPassword.Height = 40;
+
+            //Sửa để khớp vs giao diện vị trí
+            btnForgotPassword.AutoSize = false;
+            btnForgotPassword.Width = 150;
+            btnForgotPassword.Height = 25;
+            btnForgotPassword.Left = 230; // Mép phải bằng với txtPassword (50 + 330 - 150)
+            btnForgotPassword.Top = 370;  // Ngay trên nút Đăng nhập (Top 390)
+            btnForgotPassword.ForeColor = gold;
+            btnForgotPassword.TextAlign = ContentAlignment.MiddleRight;
+            btnForgotPassword.Cursor = Cursors.Hand;
+            pnlLogin.Controls.Add(btnForgotPassword);
 
             btnLogin.Text = "ĐĂNG NHẬP";
             btnLogin.BackColor = gold;
@@ -166,7 +183,7 @@ namespace PoolTournament
             btnLogin.Width = 330;
             btnLogin.Height = 45;
             btnLogin.Left = 50;
-            btnLogin.Top = 390;
+            btnLogin.Top = 400;
 
             btnLogin.MouseEnter += BtnLogin_MouseEnter;
             btnLogin.MouseLeave += BtnLogin_MouseLeave;
@@ -291,15 +308,16 @@ namespace PoolTournament
 
             btnShowPassword.Click += (sender, e) =>
             {
-                if (txtPassword.PasswordChar == '\0')
+                if (txtPassword.UseSystemPasswordChar)
                 {
-                    txtPassword.PasswordChar = '●';
-                    btnShowPassword.Text = "👁";
+                    txtPassword.UseSystemPasswordChar = false;
+                    txtPassword.PasswordChar = '\0';
+                    btnShowPassword.Text = "🙈";
                 }
                 else
                 {
-                    txtPassword.PasswordChar = '\0';
-                    btnShowPassword.Text = "🙈";
+                    txtPassword.UseSystemPasswordChar = true;
+                    btnShowPassword.Text = "👁";
                 }
                 txtPassword.Focus();
                 txtPassword.SelectionStart = txtPassword.Text.Length;
@@ -360,6 +378,22 @@ namespace PoolTournament
                 txtPassword.Focus();
                 return;
             }
+
+            // 2. Kiểm tra độ dài tối thiểu (BỔ SUNG)
+            if (username.Length < 3)
+            {
+                MessageBox.Show("Tên đăng nhập phải có ít nhất 3 ký tự!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUsername.Focus();
+                return;
+            }
+
+            if (password.Length < 6)
+            {
+                MessageBox.Show("Mật khẩu phải có ít nhất 6 ký tự!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPassword.Focus();
+                return;
+            }
+
 
             // Khóa nút đăng nhập
             btnLogin.Enabled = false;
@@ -473,6 +507,13 @@ namespace PoolTournament
 
                 return builder.ToString();
             }
+        }
+
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            ForgotPasswordForm forgotForm = new ForgotPasswordForm();
+            forgotForm.ShowDialog(); // Hiển thị dưới dạng hộp thoại
+
         }
     }
 }
