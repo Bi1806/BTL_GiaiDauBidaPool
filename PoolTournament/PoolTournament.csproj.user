@@ -4,6 +4,9 @@
     <Compile Update="Forms\DrawForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\ForgotPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\PlayerForm.Designer.cs">
       <SubType>Form</SubType>
     </Compile>
