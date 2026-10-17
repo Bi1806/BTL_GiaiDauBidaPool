@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 using Postgrest.Attributes;
 using Postgrest.Models;
 
@@ -28,7 +29,7 @@ namespace PoolTournament.Models
         [Column("is_active")]
         public bool IsActive { get; set; }
 
-        [Column("current_match_id")]
+        [Column("current_match_id", NullValueHandling = NullValueHandling.Include)]
         public Guid? CurrentMatchId { get; set; }
 
         [Column("created_at")]

@@ -1,4 +1,5 @@
 ﻿using PoolTournament.Models;
+using PoolTournament.Services;
 
 namespace PoolTournament
 {
@@ -58,6 +59,7 @@ namespace PoolTournament
         private TextBox txtSearch = null!;
         private ComboBox cboFilter = null!;
         private Button btnRefresh = null!;
+        private Button btnOpen = null!;
         private DataGridView dgvTournaments = null!;
 
         private Panel pnlDetail = null!;
@@ -137,6 +139,9 @@ namespace PoolTournament
             btnRefresh = MakeButton(this, "⟳ Tải lại", 520, 63, 100, 32, InputBg, Gold);
             btnRefresh.Click += async (s, e) => await RunAsync(LoadDataAsync);
 
+            btnOpen = MakeButton(this, "▶ Vào giải", 630, 63, 110, 32, Gold, Color.Black);
+            btnOpen.Click += BtnOpen_Click;
+
             // ---------- Bảng danh sách giải ----------
             dgvTournaments = new DataGridView
             {
@@ -169,6 +174,10 @@ namespace PoolTournament
             dgvTournaments.DefaultCellStyle.SelectionForeColor = Gold;
             dgvTournaments.DefaultCellStyle.Font = new Font("Segoe UI", 10);
             dgvTournaments.SelectionChanged += Dgv_SelectionChanged;
+            dgvTournaments.CellDoubleClick += (s, e) =>
+            {
+                if (e.RowIndex >= 0) BtnOpen_Click(s, EventArgs.Empty);
+            };
             this.Controls.Add(dgvTournaments);
 
             BuildDetailPanel();
@@ -749,6 +758,22 @@ namespace PoolTournament
             });
         }
 
+        private void BtnOpen_Click(object? sender, EventArgs e)
+        {
+            var tournament = CurrentTournament;
+            if (tournament == null)
+            {
+                Warn("Vui lòng chọn giải đấu cần mở từ danh sách!");
+                return;
+            }
+
+            var form = new TournamentDetailForm(tournament);
+
+            // Khi đóng, tải lại danh sách để cập nhật trạng thái / số cơ thủ
+            form.FormClosed += async (s, ev) => await RunAsync(LoadDataAsync);
+            form.Show(this);
+        }
+
         private async void BtnDelete_Click(object? sender, EventArgs e)
         {
             var tournament = CurrentTournament;
@@ -765,6 +790,7 @@ namespace PoolTournament
                 (count > 0
                     ? $"Danh sách {count} cơ thủ đã đăng ký cũng sẽ bị xóa.\n"
                     : "") +
+                "Toàn bộ bảng đấu, lịch thi đấu và kết quả của giải cũng sẽ bị xóa.\n" +
                 "Hành động này không thể hoàn tác.",
                 "Xác nhận xóa",
                 MessageBoxButtons.YesNo,
@@ -777,16 +803,8 @@ namespace PoolTournament
 
             await RunAsync(async () =>
             {
-                var client = SupabaseClient.Instance;
-
-                // Xóa danh sách đăng ký trước (phòng khi DB không bật cascade)
-                await client.From<TournamentParticipantModel>()
-                    .Where(x => x.TournamentId == id)
-                    .Delete();
-
-                await client.From<TournamentModel>()
-                    .Where(x => x.Id == id)
-                    .Delete();
+                // Xóa cả bảng đấu, trận đấu, danh sách đăng ký rồi mới xóa giải
+                await TournamentService.DeleteTournamentAsync(id);
 
                 _selectedId = null;
                 _participantsLoadedFor = null;
@@ -887,6 +905,13 @@ namespace PoolTournament
 
             await RunAsync(async () =>
             {
+                if (await TournamentService.HasDrawAsync(tournamentId))
+                {
+                    Warn("Giải đã bốc thăm nên không thể thêm cơ thủ. " +
+                         "Hãy hủy bốc thăm trong màn hình chi tiết giải nếu muốn thay đổi danh sách.");
+                    return;
+                }
+
                 await SupabaseClient.Instance
                     .From<TournamentParticipantModel>()
                     .Insert(new TournamentParticipantModel
@@ -929,6 +954,13 @@ namespace PoolTournament
 
             await RunAsync(async () =>
             {
+                if (await TournamentService.HasDrawAsync(tournamentId))
+                {
+                    Warn("Giải đã bốc thăm nên không thể xóa cơ thủ. " +
+                         "Hãy hủy bốc thăm trong màn hình chi tiết giải nếu muốn thay đổi danh sách.");
+                    return;
+                }
+
                 await SupabaseClient.Instance
                     .From<TournamentParticipantModel>()
                     .Where(x => x.TournamentId == tournamentId && x.PlayerId == playerId)

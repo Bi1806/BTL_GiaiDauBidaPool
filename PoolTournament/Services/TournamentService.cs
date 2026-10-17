@@ -374,6 +374,15 @@ namespace PoolTournament.Services
             Guid winner = score1 > score2 ? match.Player1Id.Value : match.Player2Id.Value;
             bool isKnockout = RoundCode.IsKnockout(match.RoundName);
 
+            // Đã có nhánh loại trực tiếp thì không cho sửa kết quả vòng bảng (vì nhánh đã dựng từ kết quả đó)
+            if (match.RoundName == RoundCode.Group)
+            {
+                var existing = await GetMatchesAsync(match.TournamentId);
+                if (existing.Any(m => RoundCode.IsKnockout(m.RoundName)))
+                    throw new InvalidOperationException(
+                        "Đã tạo nhánh loại trực tiếp, không thể sửa kết quả vòng bảng.");
+            }
+
             // Tìm trận vòng sau (nếu có) và chặn sửa nếu vòng sau đã bắt đầu
             MatchModel? next = null;
             int size = isKnockout ? RoundCode.KnockoutSize(match.RoundName) : 0;
